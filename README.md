@@ -1,72 +1,82 @@
-# 🚀 Portfolia.dev - SaaS Portfolio Platform
+# 🚀 Portfolia.dev - The Ultimate SaaS Portfolio Builder
 
-> **A Full-Stack SaaS application enabling developers to build, customize, and monetize 3D interactive portfolios.**
+[![Portfolia Banner](assets/banner.png)](https://portfolio-popm.onrender.com)
 
-🔴 **LIVE DEMO:** [ΒΑΛΕ_ΕΔΩ_ΤΟ_LINK_TOY_RENDER_SOY]
+> **Stop building from scratch. Design. Export. Get Hired.**
+>
+> A secure, full-stack SaaS platform that allows professionals to generate high-end 3D & Minimal Portfolios and Harvard-style PDF Resumes in minutes.
+
+<div align="center">
+
+[![Live Demo](https://img.shields.io/badge/🔴_Live_Demo-Online-success?style=for-the-badge)](https://portfolio-popm.onrender.com)
+[![Python](https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-Framework-black?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![Stripe](https://img.shields.io/badge/Stripe-Payments-635bff?style=for-the-badge&logo=stripe&logoColor=white)](https://stripe.com/)
+[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+
+</div>
 
 ---
 
-## 📖 Overview
+## 🌟 Overview
 
-**Portfolia** is a production-ready SaaS platform built to solve the issue of static, boring resumes. It provides a dynamic dashboard where users can input their data once and generate a high-performance, 3D-accelerated personal website.
+Portfolia is not just a template designed for developers; it's a complete, production-ready **SaaS ecosystem**. It solves the problem of creating professional, deployable personal websites without spending hours coding them from zero.
 
-This project demonstrates advanced Full-Stack capabilities, including secure authentication, payment processing, and dynamic content rendering.
+It combines a powerful real-time editor with secure backend infrastructure, handling everything from user authentication and database management to payments and PDF generation.
+
+![Core Features](assets/features_grid.png)
+
+---
 
 ## ✨ Key Features
 
-### 🔐 Authentication & Security
-* Secure User Registration & Login system.
-* Password Hashing with **Bcrypt**.
-* Session Management via **Flask-Login**.
-* Protected Routes & Dashboard logic.
+### 🎨 The Creator Studio (Real-Time Editor)
+A sophisticated split-screen interface. Users input data on the left, and the portfolio updates instantly on the right. No page reloads required.
 
-### 💳 Monetization (Stripe Integration)
-* Freemium model architecture.
-* **Stripe Checkout** integration for premium upgrades.
-* Database-level locking for premium features (Download/Export).
+* **Adaptive Themes:** Switch instantly between **Cyberpunk** (3D animated background for devs) and **Minimal Architect** (clean grid for designers).
+* **Dynamic Visuals:** Real-time accent color picker and typography adjustments.
 
-### 🎨 Dynamic 3D Frontend
-* **Theme Engine:** Users can switch between *Cyberpunk*, *Corporate*, and *Hacker* themes instantly.
-* **Interactive Visuals:** Starfield particle system using HTML5 Canvas.
-* **Glassmorphism UI:** Modern CSS3 styling.
+![Editor UI](assets/editor_ui.png)
 
-### 📦 Export Engine
-* **Single-File Generation:** The system compiles CSS, JS, and Data into a single `.html` file for offline use.
-* **QR Code Generator:** Auto-generates scannable codes for mobile viewing.
+### 📄 Professional Exports
+* **PDF Generation Engine:** Utilizes `WeasyPrint` to render pixel-perfect, ATS-friendly PDF CVs directly from the HTML template. includes dynamic font-sizing options (Compact to Huge).
+* **100% Code Ownership (Premium):** Users can download the raw, unminified HTML/CSS file to host freely on GitHub Pages, Netlify, or Vercel.
+
+### 💳 SaaS Monetization & Security
+Integrated **Stripe Checkout** flow for friction-less upgrades to the Lifetime Pro plan.
+
+* **Secure Authentication:** `Flask-Bcrypt` hashing and secure session management.
+* **Production Security:** Implements CSP headers via `Flask-Talisman` and rate-limiting via `Flask-Limiter` to prevent abuse.
+* **SMTP Transactional Emails:** Powered by **Resend** for reliable delivery.
+
+![Pricing Model](assets/pricing.png)
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack Under the Hood
 
-| Component | Technology |
+| Category | Technologies |
 | :--- | :--- |
-| **Backend** | Python, Flask, Jinja2 |
-| **Database** | SQLAlchemy (SQLite / PostgreSQL) |
-| **Frontend** | HTML5, CSS3, JavaScript (Vanilla) |
-| **Payments** | Stripe API |
-| **Deployment** | Render / Gunicorn |
-| **Version Control** | Git / GitHub |
+| **Backend Framework** | Python 3.11, Flask 3.0 |
+| **Database & ORM** | PostgreSQL (Production), SQLAlchemy |
+| **Frontend** | HTML5, Modern JavaScript (Vanilla), TailwindCSS |
+| **PDF Engine** | WeasyPrint |
+| **Payments & Billing** | Stripe API |
+| **Email Infrastructure**| Resend SMTP |
+| **Deployment** | Render Cloud PaaS |
 
 ---
 
-## 📸 Screenshots
+## 🚀 Local Development Setup
 
-*(Εδώ μπορείς να ανεβάσεις φωτογραφίες αργότερα)*
+Want to run it locally? Follow these steps.
 
-### 1. The Dashboard
-> Users can manage skills, experience, and projects via an intuitive interface.
+### Prerequisites
+* Python 3.10 or higher
+* Git
+* *(Optional but recommended)* A virtual environment
 
-### 2. The 3D Portfolio
-> The final output featuring 3D transitions and neon aesthetics.
-
-### 3. Payment Gateway
-> Seamless upgrade flow powered by Stripe.
-
----
-
-## 🔒 Source Code
-
-The source code for this project is currently **Private** as it is a commercial product. 
-However, I am happy to provide code walkthroughs or access to specific modules for interview purposes.
-
-**Created by Vaggelis Damoulas**
+### 1. Clone the repository
+```bash
+git clone [https://github.com/Vdamoulas/portfolio-saas.git](https://github.com/Vdamoulas/portfolio-saas.git)
+cd portfolio-saas
