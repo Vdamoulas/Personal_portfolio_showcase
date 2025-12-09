@@ -10,73 +10,77 @@
 
 [![Live Demo](https://img.shields.io/badge/🔴_Live_Demo-Online-success?style=for-the-badge)](https://portfolio-popm.onrender.com)
 [![Python](https://img.shields.io/badge/Python-3.11+-blue?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![Flask](https://img.shields.io/badge/Flask-Framework-black?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
-[![Stripe](https://img.shields.io/badge/Stripe-Payments-635bff?style=for-the-badge&logo=stripe&logoColor=white)](https://stripe.com/)
+[![Flask](https://img.shields.io/badge/Flask-3.0-black?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-336791?style=for-the-badge&logo=postgresql&logoColor=white)](https://www.postgresql.org/)
+[![Status](https://img.shields.io/badge/Status-Production%20%7C%20Private%20Source-red?style=for-the-badge)](https://portfolio-popm.onrender.com)
 
 </div>
 
 ---
 
-## 🌟 Overview
+## 🌟 Project Overview
 
-Portfolia is not just a template designed for developers; it's a complete, production-ready **SaaS ecosystem**. It solves the problem of creating professional, deployable personal websites without spending hours coding them from zero.
+**Portfolia** is a production-ready **SaaS ecosystem** developed to solve the problem of creating professional personal websites and resumes effortlessly.
 
-It combines a powerful real-time editor with secure backend infrastructure, handling everything from user authentication and database management to payments and PDF generation.
+This repository serves as a showcase for the application's capabilities. **The source code is currently private** as this is a commercial product.
 
-![Core Features](assets/features_grid.png)
+> **Interested in the code?**
+> If you are a recruiter or prospective client wanting to review the code architecture, please contact me directly.
 
 ---
 
-## ✨ Key Features
+## ✨ Key Features Implemented
 
 ### 🎨 The Creator Studio (Real-Time Editor)
-A sophisticated split-screen interface. Users input data on the left, and the portfolio updates instantly on the right. No page reloads required.
-
-* **Adaptive Themes:** Switch instantly between **Cyberpunk** (3D animated background for devs) and **Minimal Architect** (clean grid for designers).
-* **Dynamic Visuals:** Real-time accent color picker and typography adjustments.
+* **Architecture:** Built with Python/Flask and Vanilla JS for zero-latency updates.
+* **Functionality:** Users input data on the left, and the DOM updates instantly via event listeners, without server roundtrips.
+* **Themes:** Dynamic CSS variable injection allows switching between **Cyberpunk** and **Minimal** modes.
 
 ![Editor UI](assets/editor_ui.png)
 
-### 📄 Professional Exports
-* **PDF Generation Engine:** Utilizes `WeasyPrint` to render pixel-perfect, ATS-friendly PDF CVs directly from the HTML template. includes dynamic font-sizing options (Compact to Huge).
-* **100% Code Ownership (Premium):** Users can download the raw, unminified HTML/CSS file to host freely on GitHub Pages, Netlify, or Vercel.
+### 📄 PDF Generation Engine
+* **Technology:** Uses `WeasyPrint` backend rendering.
+* **Logic:** Converts Jinja2 HTML templates into strict A4 PDF layouts on the fly.
+* **Features:** Handles page breaks, dynamic font sizing (8pt-14pt), and print-ready CSS.
 
-### 💳 SaaS Monetization & Security
-Integrated **Stripe Checkout** flow for friction-less upgrades to the Lifetime Pro plan.
-
-* **Secure Authentication:** `Flask-Bcrypt` hashing and secure session management.
-* **Production Security:** Implements CSP headers via `Flask-Talisman` and rate-limiting via `Flask-Limiter` to prevent abuse.
-* **SMTP Transactional Emails:** Powered by **Resend** for reliable delivery.
+### 💳 Payments & Security Stack
+* **Stripe Integration:** Full checkout session handling with Webhooks.
+* **Security Measures:**
+    * `Flask-Bcrypt` for password hashing.
+    * `Flask-Limiter` for API rate limiting.
+    * `Flask-Talisman` for Content Security Policy (CSP).
+* **Database:** Managed PostgreSQL instance on Cloud Infrastructure.
 
 ![Pricing Model](assets/pricing.png)
 
 ---
 
-## 🛠️ Tech Stack Under the Hood
+## 🛠️ Technical Stack
 
-| Category | Technologies |
+| Category | Technologies Used |
 | :--- | :--- |
-| **Backend Framework** | Python 3.11, Flask 3.0 |
-| **Database & ORM** | PostgreSQL (Production), SQLAlchemy |
-| **Frontend** | HTML5, Modern JavaScript (Vanilla), TailwindCSS |
-| **PDF Engine** | WeasyPrint |
-| **Payments & Billing** | Stripe API |
-| **Email Infrastructure**| Resend SMTP |
-| **Deployment** | Render Cloud PaaS |
+| **Backend** | Python 3.11, Flask, Gunicorn |
+| **Database** | PostgreSQL, SQLAlchemy ORM |
+| **Frontend** | HTML5, TailwindCSS, JavaScript (ES6) |
+| **Services** | Stripe API (Payments), Resend (SMTP Emails) |
+| **DevOps** | Docker-ready, Render Cloud Hosting |
 
 ---
 
-## 🚀 Local Development Setup
+## 📸 Application Gallery
 
-Want to run it locally? Follow these steps.
+### Landing Page
+High-conversion landing page with CSS Grid animations.
+![Landing Page](assets/banner.png)
 
-### Prerequisites
-* Python 3.10 or higher
-* Git
-* *(Optional but recommended)* A virtual environment
+### Features Grid
+Service breakdown and value proposition.
+![Features](assets/features_grid.png)
 
-### 1. Clone the repository
-```bash
-git clone [https://github.com/Vdamoulas/portfolio-saas.git](https://github.com/Vdamoulas/portfolio-saas.git)
-cd portfolio-saas
+---
+
+<div align="center">
+
+**Developed by [Vdamoulas](https://github.com/Vdamoulas).**
+
+</div>
